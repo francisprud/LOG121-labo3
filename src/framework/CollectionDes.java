@@ -80,18 +80,18 @@ public class CollectionDes {
 	 * Accesseur pour des
 	 * @return des le tableau de dés actuel
 	 */
-	/*public De[] getTableauDes() {
+	public De[] getTableauDes() {
 		return des;
-	}*/
+	}
 	
 	
 	/**
 	 * Accesseur pour indice
 	 * @return indice l'indice actuel du tableau de dés
 	 */
-	/*public int getIndice() {
+	public int getIndice() {
 		return indice;
-	}*/
+	}
 	
 	
 	
@@ -103,18 +103,18 @@ public class CollectionDes {
 	 * Modifie le tableau de dés
 	 * @param des le nouveau tableau de dés
 	 */
-	/*public void setDes(De[] des) {
+	public void setDes(De[] des) {
 		this.des = des;
-	}*/
+	}
 	
 	
 	/**
 	 * Modifie l'indice
 	 * @param indice le nouvel indice
 	 */
-	/*public void setIndice(int indice) {
+	public void setIndice(int indice) {
 		this.indice = indice;
-	}*/
+	}
 	
 	
 	

@@ -36,8 +36,8 @@ public class Joueur implements Comparable<Joueur> {
 	 ********************/
 	// Le nom du joueur
 	private String nom;
-	// Le score du joueur
-	private int score;
+	// Le score du joueur, par défaut à 0
+	private int score = 0;
 	
 	
 	
@@ -49,6 +49,14 @@ public class Joueur implements Comparable<Joueur> {
 	 * Constructeur par défaut
 	 */
 	public Joueur() {}
+	
+	
+	/**
+	 * Constructeur par copie d'attribut
+	 */
+	public Joueur(String nom) {
+		this.nom = nom;
+	}
 	
 	
 	/**

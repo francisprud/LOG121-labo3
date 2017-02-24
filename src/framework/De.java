@@ -34,8 +34,8 @@ public class De implements Comparable<De> {
 	/********************
 	 * ATTRIBUTS
 	 ********************/
-	// Le nombre de faces d'un dé
-	private int nbFaces;
+	// Le nombre de faces d'un dé, par défaut à 6
+	private int nbFaces = 6;
 	// Le résultat d'un lancer de dé
 	private int resultat;
 	
@@ -49,6 +49,14 @@ public class De implements Comparable<De> {
 	 * Constructeur par défaut
 	 */
 	public De() {}
+	
+	
+	/**
+	 * Constructeur par copie d'attribut
+	 */
+	public De(int nbFaces) {
+		this.nbFaces = nbFaces;
+	}
 	
 	
 	/**
