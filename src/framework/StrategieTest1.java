@@ -12,7 +12,7 @@ Professeur : Francis Cardinal
 Chargés de cours : Antoine Grenier
 				   Mathieu Ouellet
 				   
-Nom du fichier : StrategieBuncoPlus.java
+Nom du fichier : StrategieTest1.java
 Date de création : 2017-02-24
 Date de dernière modification : 2017-02-
 ********************************************************************************
@@ -29,7 +29,7 @@ Historique des modifications
 /**
  * Cette classe...
  */
-public class StrategieBuncoPlus implements IStrategie {
+public class StrategieTest1 implements StrategieI {
 
 	/**
 	 * 

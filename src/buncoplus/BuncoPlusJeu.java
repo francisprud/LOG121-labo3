@@ -1,4 +1,6 @@
-package framework;
+package buncoplus;
+
+import framework.*;
 
 /*******************************************************************************
 Cours : LOG121
@@ -12,7 +14,7 @@ Professeur : Francis Cardinal
 Chargés de cours : Antoine Grenier
 				   Mathieu Ouellet
 				   
-Nom du fichier : IStrategie.java
+Nom du fichier : BuncoPlusJeu.java
 Date de création : 2017-02-24
 Date de dernière modification : 2017-02-
 ********************************************************************************
@@ -29,16 +31,10 @@ Historique des modifications
 /**
  * Cette classe...
  */
-public interface IStrategie {
-
-	/**
-	 * La méthode de calcul du score après chaque tour à être implémentée 
-	 */
-	public int calculerScoreTour(Jeu jeu);
+public class BuncoPlusJeu extends Jeu {
+	 
+	public BuncoPlusJeu() {
+		getStrategieC().setStrategie(new BuncoPlusStrategie());;
+	}
 	
-	
-	/**
-	 * La méthode de calcul du vainqueur d'une partie à être implémentée
-	 */
-	public int calculerLeVainqueur(Jeu jeu);
 }

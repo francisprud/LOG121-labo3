@@ -29,8 +29,18 @@ Historique des modifications
 /**
  * Cette classe...
  */
-public class Strategie {
+public class StrategieC {
 
+	/**
+	 * La seule instance de StrategieC. Cela évite que quelqu'un implémente
+	 * plusieurs stratégies de calculs contradictoires durant la même partie
+	 * et ne vienne jouer dans cette classe.
+	 */
+	private static final StrategieC INSTANCE = new StrategieC();
+	
+	
+	
+	
 	/********************
 	 * ATTRIBUTS
 	 ********************/
@@ -38,7 +48,7 @@ public class Strategie {
 	 * L'interface de toutes les stratégies de calculs du score par tour et du
 	 * vainqueur d'une partie
 	 */
-	private IStrategie iStrategie;
+	private StrategieI strategieI;
 	
 	
 	
@@ -49,15 +59,7 @@ public class Strategie {
 	/**
 	 * Constructeur par défaut
 	 */
-	public Strategie() {}
-	
-	
-	/**
-	 * Constructeur par copie d'attribut
-	 */
-	public Strategie(IStrategie iStrategie) {
-		this.iStrategie = iStrategie;
-	}
+	private StrategieC() {}
 	
 	
 	
@@ -66,18 +68,34 @@ public class Strategie {
 	 * AUTRES MÉTHODES
 	 ********************/
 	/**
-	 * Modifie la stratégie de calculs
+	 * Accède à la seule instance de StrategieC
+	 * @return INSTANCE la seule instance de StrategieC
 	 */
-	public void setStrategie(IStrategie iStrategie) {
-		this.iStrategie = iStrategie;
+	public static StrategieC getInstance() {
+		return INSTANCE;
 	}
 	
 	
 	/**
-	 * Exécute la stratégie de calculs spécifiée
+	 * Modifie la stratégie de calculs
 	 */
-	public void executerStrategie(Jeu jeu) {
-		System.out.println(iStrategie.calculerScoreTour(jeu));
-		System.out.println(iStrategie.calculerLeVainqueur(jeu));
+	public void setStrategie(StrategieI strategieI) {
+		this.strategieI = strategieI;
+	}
+	
+	
+	/**
+	 * 
+	 */
+	public int calculerScoreTour(Jeu jeu) {
+		return strategieI.calculerScoreTour(jeu);
+	}
+	
+	
+	/**
+	 * 
+	 */
+	public int calculerLeVainqueur(Jeu jeu) {
+		return strategieI.calculerLeVainqueur(jeu);
 	}
 }

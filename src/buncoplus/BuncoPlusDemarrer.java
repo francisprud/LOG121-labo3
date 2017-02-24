@@ -1,4 +1,4 @@
-package framework;
+package buncoplus;
 
 /*******************************************************************************
 Cours : LOG121
@@ -12,7 +12,7 @@ Professeur : Francis Cardinal
 Chargés de cours : Antoine Grenier
 				   Mathieu Ouellet
 				   
-Nom du fichier : StrategieTest.java
+Nom du fichier : BuncoPlusDemarrer.java
 Date de création : 2017-02-24
 Date de dernière modification : 2017-02-
 ********************************************************************************
@@ -29,20 +29,13 @@ Historique des modifications
 /**
  * Cette classe...
  */
-public class StrategieTest implements IStrategie {
+public class BuncoPlusDemarrer {
 
-	/**
-	 * 
-	 */
-	public int calculerScoreTour(Jeu jeu) {
-		return 9;
+	public static void main(String[] args) {
+		
+		BuncoPlusJeu buncoPlusJeu = new BuncoPlusJeu();
+		System.out.println(buncoPlusJeu.calculerScoreTour());
+		System.out.println(buncoPlusJeu.calculerLeVainqueur());
 	}
-	
-	
-	/**
-	 * 
-	 */
-	public int calculerLeVainqueur(Jeu jeu) {
-		return 999;
-	}
+
 }

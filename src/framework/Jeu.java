@@ -12,7 +12,7 @@ Professeur : Francis Cardinal
 Chargés de cours : Antoine Grenier
 				   Mathieu Ouellet
 				   
-Nom du fichier : IStrategie.java
+Nom du fichier : Jeu.java
 Date de création : 2017-02-24
 Date de dernière modification : 2017-02-
 ********************************************************************************
@@ -32,10 +32,22 @@ Historique des modifications
 public class Jeu {
 
 	/********************
-	 * ATTRIBUTS
+	 * ATTRIBUTS 
 	 ********************/
+	// Le nombre de joueurs pour une partie
+	private int nbJoueurs;
+	// Le nombre de dés par joueur
+	private int nbDes;
+	// Le nombre de faces par dé
+	private int nbFaces;
+	// Le total d'un lancer de dés par un joueur
+	private int scoreDes;
 	// Le nombre de tours complétés durant la partie en cours, par défaut à 0
-	private int nbTours = 0;
+	private int nbToursCompletes = 0;
+	// Le nombre de tours maximal durant la partie en cours, par défaut à 1
+	private int nbToursMax = 1;
+	// La stratégie de calculs du score par tour et du vainqueur
+	private StrategieC strategieC = StrategieC.getInstance();
 	
 	
 	
@@ -50,8 +62,16 @@ public class Jeu {
 	
 	
 	/**
-	 * 
+	 * Constructeur par copie d'attributs
+	 * @param nbJoueurs
+	 * @param nbDes
+	 * @param nbFaces
 	 */
+	public Jeu(int nbJoueurs, int nbDes, int nbFaces) {
+		this.nbJoueurs = nbJoueurs;
+		this.nbDes = nbDes;
+		this.nbFaces = nbFaces;
+	}
 	
 	
 	
@@ -61,7 +81,65 @@ public class Jeu {
 	 ********************/
 	/**
 	 * 
+	 * @return nbJoueurs 
 	 */
+	public int getNbJoueurs() {
+		return nbJoueurs;
+	}
+	
+	
+	/**
+	 * 
+	 * @return nbDes 
+	 */
+	public int getNbDes() {
+		return nbDes;
+	}
+	
+	
+	/**
+	 * 
+	 * @return nbFaces 
+	 */
+	public int getNbFaces() {
+		return nbFaces;
+	}
+	
+	
+	/**
+	 * 
+	 * @return scoreDes 
+	 */
+	public int getScoreDes() {
+		return scoreDes;
+	}
+	
+	
+	/**
+	 * 
+	 * @return nbToursCompletes 
+	 */
+	public int getNbToursCompletes() {
+		return nbToursCompletes;
+	}
+	
+	
+	/**
+	 * 
+	 * @return nbToursMax 
+	 */
+	public int getNbToursMax() {
+		return nbToursMax;
+	}
+	
+	
+	/**
+	 * 
+	 * @return strategieC 
+	 */
+	public StrategieC getStrategieC() {
+		return strategieC;
+	}
 	
 	
 	
@@ -71,7 +149,65 @@ public class Jeu {
 	 ********************/
 	/**
 	 * 
+	 * @param nbJoueurs 
 	 */
+	public void setNbJoueurs(int nbJoueurs) {
+		this.nbJoueurs = nbJoueurs;
+	}
+	
+	
+	/**
+	 * 
+	 * @param nbDes 
+	 */
+	public void setNbDes(int nbDes) {
+		this.nbDes = nbDes;
+	}
+	
+	
+	/**
+	 * 
+	 * @param nbFaces 
+	 */
+	public void setNbFaces(int nbFaces) {
+		this.nbFaces = nbFaces;
+	}
+	
+	
+	/**
+	 * 
+	 * @param scoreDes 
+	 */
+	public void setScoreDes(int scoreDes) {
+		this.scoreDes = scoreDes;
+	}
+	
+	
+	/**
+	 * 
+	 * @param nbToursCompletes 
+	 */
+	public void setNbToursCompletes(int nbToursCompletes) {
+		this.nbToursCompletes = nbToursCompletes;
+	}
+	
+	
+	/**
+	 * 
+	 * @param nbToursMax  
+	 */
+	public void setNbToursMax(int nbToursMax) {
+		this.nbToursMax = nbToursMax;
+	}
+	
+	
+	/**
+	 * 
+	 * @param strategieC
+	 */
+	public void setStrategieC(StrategieC strategieC) {
+		this.strategieC = strategieC;
+	}
 	
 	
 	
@@ -83,7 +219,7 @@ public class Jeu {
 	 * 
 	 */
 	public int calculerScoreTour() {
-		return 12345;
+		return strategieC.calculerScoreTour(this);
 	}
 	
 	
@@ -91,6 +227,6 @@ public class Jeu {
 	 * 
 	 */
 	public int calculerLeVainqueur() {
-		return 67890;
+		return strategieC.calculerLeVainqueur(this);
 	}
 }

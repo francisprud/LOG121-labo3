@@ -1,5 +1,7 @@
 package framework;
 
+import java.util.Random;
+
 /*******************************************************************************
 Cours : LOG121
 Session : H2017
@@ -34,8 +36,10 @@ public class De implements Comparable<De> {
 	/********************
 	 * ATTRIBUTS
 	 ********************/
-	// Le nombre de faces d'un dé, par défaut à 6
-	private int nbFaces = 6;
+	// Le nombre de faces d'un dé
+	private int nbFaces;
+	// Ne sert qu'à générer aléatoirement un entier suite à un lancer de dé
+	private Random random = new Random();
 	// Le résultat d'un lancer de dé
 	private int resultat;
 	
@@ -56,6 +60,7 @@ public class De implements Comparable<De> {
 	 */
 	public De(int nbFaces) {
 		this.nbFaces = nbFaces;
+		resultat = lancerDe();
 	}
 	
 	
@@ -136,5 +141,15 @@ public class De implements Comparable<De> {
 		else {
 			return 1;
 		}
+	}
+	
+	
+	/**
+	 * Retourne le résultat d'un lancer de dé
+	 * Remarque : il est assumé que n'importe quel dé comporte des valeurs entières
+	 * 			  allant de 1 à nbFaces
+	 */
+	public int lancerDe() {
+		return random.ints(1, this.nbFaces+1).findFirst().getAsInt();
 	}
 }

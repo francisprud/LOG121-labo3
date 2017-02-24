@@ -1,5 +1,36 @@
 package framework;
 
+import java.util.Random;
+
+/*******************************************************************************
+Cours : LOG121
+Session : H2017
+Groupe : 1
+Projet : Laboratoire #3
+Étudiants : Samnang Eang
+			Francis Prud'Homme
+			
+Professeur : Francis Cardinal
+Chargés de cours : Antoine Grenier
+				   Mathieu Ouellet
+				   
+Nom du fichier : Tests.java
+Date de création : 2017-02-24
+Date de dernière modification : 2017-02-
+********************************************************************************
+Historique des modifications
+********************************************************************************
+2017-02-24 Version initiale
+2017-02-
+2017-02-
+2017-02-
+2017-02-
+2017-02-
+*******************************************************************************/
+
+/**
+ * Cette classe ne sert qu'à des fins de tests
+ */
 public class Tests {
 
 	public static void main(String[] args){
@@ -7,7 +38,7 @@ public class Tests {
 		/**
 		 * Tests CONCLUANTS pour CollectionJoueurs
 		 */
-		Joueur Adele = new Joueur("Adele", 40);
+		/*Joueur Adele = new Joueur("Adele", 40);
 		Joueur Brandon = new Joueur("Brandon", 10);
 		Joueur Chris = new Joueur("Chris", 50);
 		Joueur Daniel = new Joueur("Daniel", 30);
@@ -49,7 +80,7 @@ public class Tests {
 		itJoueur = collectionJoueursABCDE.iterator();
 		System.out.println("Taille de collectionJoueursABCDE : " +
 				collectionJoueursABCDE.size());
-		System.out.println("----------------------------------------");
+		System.out.println("----------------------------------------");*/
 		
 		
 		
@@ -57,7 +88,7 @@ public class Tests {
 		/**
 		 * Tests CONCLUANTS pour CollectionDes
 		 */
-		De de1 = new De(20, 11);
+		/*De de1 = new De(20, 11);
 		De de2 = new De(20, 6);
 		De de3 = new De(20, 19);
 		De[] des123 = {de1, de2, de3};
@@ -95,7 +126,7 @@ public class Tests {
 		itDe = collectionDes123.iterator();
 		System.out.println("Taille de collectionDes123 : " +
 				collectionDes123.size());
-		System.out.println("----------------------------------------");
+		System.out.println("----------------------------------------");*/
 		
 		
 		
@@ -103,20 +134,34 @@ public class Tests {
 		/**
 		 * Tests CONCLUANTS pour Jeu, Strategie, IStrategie
 		 */
-		Jeu jeu = new Jeu();
+		/*Jeu jeu = new Jeu();
 		// Supposé afficher 12345 et 67890
 		System.out.println("jeu.calculerScoreTour() : " +
 				jeu.calculerScoreTour());
 		System.out.println("jeu.calculerLeVainqueur() : " +
 				jeu.calculerLeVainqueur());
 		Strategie strategie = new Strategie();
-		strategie.setStrategie(new StrategieBuncoPlus());
+		strategie.setStrategie(new StrategieTest1());
 		// Supposé afficher 1 et 111
 		strategie.executerStrategie(jeu);
-		strategie.setStrategie(new StrategieTest());
-		// Supposé afficher 9 et 999
+		strategie.setStrategie(new StrategieTest2());
+		// Supposé afficher 2 et 222
 		strategie.executerStrategie(jeu);
-		System.out.println("----------------------------------------");
+		System.out.println("----------------------------------------");*/
+		
+		
+		
+		
+		/**
+		 * Tests CONCLUANTS pour Random
+		 */
+		/*Random random = new Random();
+		// Affiche un entier de 1 à 6
+		System.out.println("random.ints(1,6+1) : " +
+				random.ints(1, 6+1).findFirst().getAsInt());
+		De de10Faces = new De(10);
+		System.out.println("de10Faces.getResultat() : " +
+				de10Faces.getResultat());*/
 		
 		
 		
@@ -124,5 +169,6 @@ public class Tests {
 		/**
 		 * Tests pour...
 		 */
+		
 	}
 }

@@ -1,7 +1,5 @@
 package framework;
 
-import java.util.Iterator;
-
 /*******************************************************************************
 Cours : LOG121
 Session : H2017
