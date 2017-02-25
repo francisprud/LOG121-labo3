@@ -34,7 +34,9 @@ Historique des modifications
 public class BuncoPlusJeu extends Jeu {
 	 
 	public BuncoPlusJeu() {
-		getStrategieC().setStrategie(new BuncoPlusStrategie());;
+		getStrategieC().setStrategie(new BuncoPlusStrategie());
+		System.out.println(this.calculerScoreTour());
+		System.out.println(this.calculerLeVainqueur());
 	}
 	
 }

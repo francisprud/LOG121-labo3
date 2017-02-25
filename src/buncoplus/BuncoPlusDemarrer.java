@@ -34,8 +34,6 @@ public class BuncoPlusDemarrer {
 	public static void main(String[] args) {
 		
 		BuncoPlusJeu buncoPlusJeu = new BuncoPlusJeu();
-		System.out.println(buncoPlusJeu.calculerScoreTour());
-		System.out.println(buncoPlusJeu.calculerLeVainqueur());
 	}
 
 }

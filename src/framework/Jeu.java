@@ -42,8 +42,8 @@ public class Jeu {
 	private int nbFaces;
 	// Le total d'un lancer de dés par un joueur
 	private int scoreDes;
-	// Le nombre de tours complétés durant la partie en cours, par défaut à 0
-	private int nbToursCompletes = 0;
+	// Le tour actuel, débute par défaut au 1er tour
+	private int tourActuel = 1;
 	// Le nombre de tours maximal durant la partie en cours, par défaut à 1
 	private int nbToursMax = 1;
 	// La stratégie de calculs du score par tour et du vainqueur
@@ -117,10 +117,10 @@ public class Jeu {
 	
 	/**
 	 * 
-	 * @return nbToursCompletes 
+	 * @return tourActuel
 	 */
-	public int getNbToursCompletes() {
-		return nbToursCompletes;
+	public int getTourActuel() {
+		return tourActuel;
 	}
 	
 	
@@ -185,10 +185,10 @@ public class Jeu {
 	
 	/**
 	 * 
-	 * @param nbToursCompletes 
+	 * @param tourActuel
 	 */
-	public void setNbToursCompletes(int nbToursCompletes) {
-		this.nbToursCompletes = nbToursCompletes;
+	public void setTourActuel(int tourActuel) {
+		this.tourActuel = tourActuel;
 	}
 	
 	
@@ -215,6 +215,12 @@ public class Jeu {
 	/********************
 	 * AUTRES MÉTHODES
 	 ********************/
+	/**
+	 * 
+	 */
+	
+	
+	
 	/**
 	 * 
 	 */
